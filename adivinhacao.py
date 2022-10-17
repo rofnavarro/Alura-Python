@@ -3,22 +3,25 @@ print("******************** JOGO DA ADIVINHAÇÃO ********************")
 print("*************************************************************")
 
 secret_number = 42
+number_guess = 1
 
-guess = int(input("Chute um número: "))
-print("Você chutou: ", guess)
+victory = 0
 
-correct = secret_number == guess
-bigger = secret_number < guess
-smaller = secret_number > guess
-
-if(correct):
-    print("Parabéns! Você acertou!")
-else:
-    if(bigger):
-        print("Você errou! Seu chute foi MAIOR do que o número secreto!")
-    elif(smaller):
-        print("Você errou! Seu chute foi MENOR do que o número secreto!")
-
+while number_guess < 6 and victory == 0:
+    guess = int(input("Chute um número: "))
+    print("Tentativa: ", number_guess)
+    print("Você chutou: ", guess)
+    number_guess = number_guess + 1
+    if guess == secret_number:
+        print("Parabéns! Você acertou!")
+        victory = 1
+    else:
+        if guess > secret_number:
+            print("Você errou! Seu chute foi MAIOR do que o número secreto!")
+            print("Tente novamente!")
+        elif guess < secret_number:
+            print("Você errou! Seu chute foi MENOR do que o número secreto!")
+            print("Tente novamente!")
 
 print("*************************************************************")
 print("********************     FIM DE JOGO     ********************")
