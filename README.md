@@ -1,3 +1,6 @@
-# Alura - Python - Adivinha
+# Alura - Python
 
-Curso da Alura de python para iniciantes.
+Curso da Alura de python.
+
+***
+
