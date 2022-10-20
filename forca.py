@@ -8,6 +8,8 @@ def play():
     correct = False
     win = False
 
+    letra = input("Escolha uma letra: ")
+
     while not correct and not win:
         print("Jogando...")
 
